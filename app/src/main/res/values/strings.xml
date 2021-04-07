@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fedorinchik_hw7</string>
+    <string name="et_vvod">Введите tag гифки</string>
+    <string name="start_fragment">Гифки</string>
+    <string name="second_fragment">Поиск</string>
+    <string name="text_search">Искать</string>
+</resources>

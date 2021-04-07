@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/start_fragment"
+        android:id="@+id/firstFragment"
+        android:icon="@drawable/gph_ic_sticker" />
+
+    <item android:title="@string/second_fragment"
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/gph_ic_info_toolbar" />
+</menu>
