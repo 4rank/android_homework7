@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_first"
+        android:id="@+id/recycler_view_first_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingStart="0dp"

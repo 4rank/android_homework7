@@ -29,7 +29,7 @@ class AdapterGiphy(private val onClick: (Data) -> Unit) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         giphyHolder(holder, position)
         val currentGif = giphy[position]
-        holder.itemView.giphy.setOnClickListener {
+        holder.itemView.image_view_layout_giphy.setOnClickListener {
             onClick(currentGif)
         }
     }
@@ -38,21 +38,21 @@ class AdapterGiphy(private val onClick: (Data) -> Unit) :
         return giphy.size
     }
 
+    fun setChanged(giphy: List<Data>) {
+        this.giphy = giphy
+        notifyDataSetChanged()
+    }
+
     private fun giphyHolder(holder: ViewHolder, position: Int) {
-        val load = CircularProgressDrawable(holder.itemView.giphy.context)
+        val load = CircularProgressDrawable(holder.itemView.image_view_layout_giphy.context)
         load.strokeWidth = 10F
         load.centerRadius = 50F
         load.start()
         Glide
-            .with(holder.itemView.giphy.context)
+            .with(holder.itemView.image_view_layout_giphy.context)
             .load(giphy[position].images.original.url)
             .placeholder(load)
-            .into(holder.itemView.giphy)
+            .into(holder.itemView.image_view_layout_giphy)
 
-    }
-
-    fun setChanged(giphy: List<Data>) {
-        this.giphy = giphy
-        notifyDataSetChanged()
     }
 }

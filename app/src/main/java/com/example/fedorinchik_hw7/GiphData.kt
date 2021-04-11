@@ -1,6 +1,6 @@
 package com.example.fedorinchik_hw7
 
-data class GifData(
+data class GiphyData(
     val data: List<Data>
 )
 
